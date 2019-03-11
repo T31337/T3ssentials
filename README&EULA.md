@@ -3,10 +3,6 @@ T3ssentials | T31337's Essential Plugin
  
 /!\ This Plugin Was Made For Bukkit/Spigot Servers Not Vinilla MineCraft Servers! /!\
 
-OLD VERSION:
-
-https://www.github.com/T31337/T3ssentials-OLD/
-
 This Is The New Re-Written Version Of T3ssentials Plugin
 
 Any Feedback, Comments, Suggestions, And Polite Critisism Are Always Welcome.
@@ -20,3 +16,8 @@ EULA:
 
   You Are Welcome To Share, And Modfiy This Code Only If You Link To This GitHub Repository And Give Credit For Original Source To T31337
 =====
+
+
+OLD VERSION:
+
+https://www.github.com/T31337/T3ssentials-OLD/
