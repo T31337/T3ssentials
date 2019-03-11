@@ -1,18 +1,8 @@
-package O1010100;
-
-import java.io.BufferedReader; 
-import java.io.BufferedWriter;
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.nio.charset.Charset;
+package com.github.t31337.t3ssentials;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import java.io.*;
+import java.nio.charset.Charset;
 
 public class CfgMgr 
 {
@@ -23,7 +13,7 @@ public class CfgMgr
 		this.plugin = plugin;
 	}
 
-	public Cfg getNewConfig(String fileName, String[] header) 
+	public O1010100.Cfg getNewConfig(String fileName, String[] header)
 	{
 		File file = this.getConfigFile(fileName);
 		
@@ -34,11 +24,11 @@ public class CfgMgr
 				this.setHeader(file, header);
 		}
 		
-		Cfg config = new Cfg(this.getConfigContent(fileName), file, this.getCommentsNum(file), plugin);
+		O1010100.Cfg config = new O1010100.Cfg(this.getConfigContent(fileName), file, this.getCommentsNum(file), plugin);
 		return config;
 	}
 
-	public Cfg getNewConfig(String fileName) 
+	public O1010100.Cfg getNewConfig(String fileName)
 	{
 		return this.getNewConfig(fileName, null);
 	}

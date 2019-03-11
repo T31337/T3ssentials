@@ -1,4 +1,4 @@
-package O1010100;
+package com.github.t31337.t3ssentials;
 
 import java.io.File;
 import java.io.InputStream;
