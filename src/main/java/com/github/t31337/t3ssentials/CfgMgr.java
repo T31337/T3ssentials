@@ -1,34 +1,48 @@
 package com.github.t31337.t3ssentials;
 
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
+
 import java.io.*;
 import java.nio.charset.Charset;
+import java.util.logging.Logger;
 
 public class CfgMgr 
 {
 	private JavaPlugin plugin;
+	Logger log = Bukkit.getLogger();
 
-	public CfgMgr(JavaPlugin plugin) 
+	public CfgMgr(JavaPlugin plugin)
 	{
 		this.plugin = plugin;
 	}
 
-	public O1010100.Cfg getNewConfig(String fileName, String[] header)
+	Cfg getNewConfig(String fileName, String[] header)
 	{
 		File file = this.getConfigFile(fileName);
 		
-		if(!file.exists())
+		try
 		{
-			this.prepareFile(fileName);
-			if(header != null && header.length != 0) 
-				this.setHeader(file, header);
+			
+			
+			if (!file.exists())
+			{
+				this.prepareFile(fileName);
+				if (header != null && header.length != 0)
+					this.setHeader(file, header);
+			}
+		}
+		catch (NullPointerException error)
+		{
+			log.info("NullPointerException: "+error.getMessage());
+			log.info("Cause: "+error.getCause());
 		}
 		
-		O1010100.Cfg config = new O1010100.Cfg(this.getConfigContent(fileName), file, this.getCommentsNum(file), plugin);
+		Cfg config = new Cfg(this.getConfigContent(fileName), file, this.getCommentsNum(file), plugin);
 		return config;
 	}
 
-	public O1010100.Cfg getNewConfig(String fileName)
+	public Cfg getNewConfig(String fileName)
 	{
 		return this.getNewConfig(fileName, null);
 	}
@@ -51,13 +65,20 @@ public class CfgMgr
 		return configFile;
 	}
 
-	public void prepareFile(String filePath, String resource) 
+	private void prepareFile(String filePath, String resource)
 	{
 		File file = this.getConfigFile(filePath);
 
-		if(file.exists()) 
-			return;
-
+		try
+		{
+			if(file.exists())
+				return;
+		}
+		catch (NullPointerException error)
+		{
+			log.info("NullPointerException: "+error.getMessage());
+			log.info("Cause: "+error.getCause());
+		}
 		try 
 		{
 			file.getParentFile().mkdirs();
@@ -71,7 +92,7 @@ public class CfgMgr
 		catch (IOException e){e.printStackTrace();}
 	}
 
-	public void prepareFile(String filePath)
+	private void prepareFile(String filePath)
 	{
 		this.prepareFile(filePath, null);
 	}
@@ -124,7 +145,7 @@ public class CfgMgr
 		catch (IOException e){e.printStackTrace();}
 	}
 	
-	public InputStream getConfigContent(File file) 
+	private InputStream getConfigContent(File file)
 	{
 		if(!file.exists()) 
 			return null;
@@ -180,7 +201,7 @@ public class CfgMgr
 		catch (IOException e){e.printStackTrace();return 0;}
 	}
 
-	public InputStream getConfigContent(String filePath) 
+	private InputStream getConfigContent(String filePath)
 	{
 		return this.getConfigContent(this.getConfigFile(filePath));
 	}
@@ -253,7 +274,7 @@ public class CfgMgr
 		catch (IOException e){e.printStackTrace();}
 	}
 
-	public String getPluginName() 
+	public String getPluginName()
 	{
 		return plugin.getDescription().getName();
 	}
