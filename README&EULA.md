@@ -1,5 +1,4 @@
-# T3ssentials | T31337's Essential Plugin
- 
+T3ssentials | T31337's Essential Plugin 
 -----
  
 /!\ This Plugin Was Made For Bukkit/Spigot Servers Not Vinilla MineCraft Servers! /!\
@@ -16,5 +15,6 @@ Thanks For Browsing My CodeBase, Hope It Helps/Inspires You To Create Your Own C
 -----
  
 EULA:
+
   You Are Welcome To Share, And Modfiy This Code Only If You Link To This GitHub Repository And Give Credit For Original Source To T31337
 =====
