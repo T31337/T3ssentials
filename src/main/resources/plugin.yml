@@ -1,0 +1,7 @@
+name: T3ssentials
+version: ${project.version}
+main: com.github.t31337.t3ssentials.T3ssentials
+api-version: 1.13
+authors: [T31337]
+description: T31337's Essential Plugin
+website: https://www.github.com/T31337/
