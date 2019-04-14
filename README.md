@@ -9,6 +9,11 @@ Thanks For Browsing My CodeBase, Hope It Helps/Inspires You To Create Your Own C
 
 -T31337
 -----
+
+<html>
+ <h2>This Plugin Is Currently A Work-In-Progress, And Is Not Yet Ready. I Will Update Repository With Pre-Compiled Plugin Once It Is Ready For Testing/Installing</h2>
+ </html>
+
  
 EULA:
 
