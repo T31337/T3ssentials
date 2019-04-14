@@ -16,6 +16,7 @@ EULA:
 =====
 
 <html>
- <marquee> Hello World </marquee>
- 
+ <title>T3ssentials</title>
+ <h2>While I Plan To Release Pre-Complied Plugin, You Are Always Welcome To Clone/Download Repo And Self Compile</h2>
+ <br><br>
 </html>
