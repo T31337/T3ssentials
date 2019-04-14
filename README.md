@@ -15,11 +15,16 @@ EULA:
   You Are Welcome To Share, And Modfiy This Code Only If You Link To This GitHub Repository And Give Credit For Original Source To T31337
 =====
 
+
 <html>
- <br><br>
- <h2>While I Plan To Release Pre-Complied Plugin, You Are Always Welcome To Clone/Download Repo And Self Compile</h2>
+<style>
+h2 {color:aqua;}
+p {color:blue;}
+</style>
 <br><br>
- <footer>
-  <style color="aqua", size="15px" >&copy; T31337</style>
-  </footer>
+<h2>While I Plan To Release Pre-Complied Plugin, You Are Always Welcome To Clone/Download Repo And Self Compile</h2>
+<br><br>
+<footer>
+&copy; T31337
+</footer>
 </html>
