@@ -20,6 +20,6 @@ EULA:
  <h2>While I Plan To Release Pre-Complied Plugin, You Are Always Welcome To Clone/Download Repo And Self Compile</h2>
 <br><br>
  <footer>
-  <style color:"aqua", size: "15px" >&copy; T31337</style>
+  <style color="aqua", size="15px" >&copy; T31337</style>
   </footer>
 </html>
